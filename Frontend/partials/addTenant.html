@@ -1,0 +1,148 @@
+<div header></div>
+<div sidenav></div>
+<div class="container-fluid dashboardContainer">
+<div class="container-fluid dashboardContentHolder">
+<div class="row tenantgridcontainer">
+<div class="addtenantcontainer col-sm-12 col-md-12-col-lg-12">
+<div class="addtenantheader col-sm-12 col-md-12 col-lg-12">
+  <span>Add Tenant</span>
+  <img Class="pull-right" src="{{base}}images/dashboard/edit2.png" height="22px"/>
+</div>
+<div class="addtenantformholder col-sm-12 col-md-12 col-lg-12">
+                 <form name="addTenantForm">
+                   <div class="col-sm-6 col-md-6 col-lg-6">
+                     <div class="row">
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">Tenant name</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                         <input  type="text" id="tenantname" ng-model="Tenant.tennantname" name="tenantname" placeholder="electricity south wing" class=" tenantform" required/>
+                        </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">display name</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                     <input  type="text" id="displayname" ng-model="Tenant.displayname" name="displayname" placeholder="electricity south wing" class=" tenantform" required/>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">Account no.</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <input  type="text" id="accountno" ng-model="Tenant.accountno" name="accountno" placeholder="123456789" class=" tenantform" required/>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">tenant address</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <textarea  type="text" id="tenantaddr" ng-model="Tenant.address" placeholder="203 options primo" name="tenantaddr" class="  tenantform" required/></textarea>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">property name</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <select   required>
+                            <option >Pennsylvania 127</option>
+                            <option >Extension Naples</option>
+                            <option >CDMX. 03810</option>
+                          </select>
+                       </div>
+                     </div>
+                   </div>
+
+                   <div class="col-sm-6 col-md-6 col-lg-6 ">
+                     <div class="row">
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">tenant start date</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <input  type="text" id="tenantdatestart" ng-model="Tenant.startdate" name="tenantdatestart" placeholder="19/08/2016" class="small-input  tenantform " required/>
+                          <img src="{{base}}images/dashboard/calc.png" height="20px" alt="" />
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">tenant end date</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <input  type="text" id="tenantdateend" ng-model="Tenant.enddate" name="tenantdateend"  placeholder="28/08/2016"  class="small-input  tenantform " required/>
+                            <img src="{{base}}images/dashboard/calc.png" alt="" height="20px"/>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">billing interval</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                         <select ng-model="Tenant.billinginterval" required id="billInterval">
+                           <option value="30" >Monthly</option>
+                           <option value="10">10 days</option>
+                           <option value="20">20 days</option>
+                         </select>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor">last bill date</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <input  type="text" ng-model="Tenant.nextbilldate"  id="tenantnbd" name="tenantnbd" placeholder="19/04/2016" class="small-input  tenantform" required/>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding tenanttextcolor">next bill date</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin">
+                          <input disable readonly=""type="text" ng-model="Tenant.lastbilldate" id="tenantlbd" name="tenantlbd" placeholder="25/08/2016" class="small-input  tenantform" required/>
+                       </div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 text-right tenantmargin"><span class="tenantpadding  tenanttextcolor" style="visibility:hidden;">custome rate</span></div>
+                       <div class="col-sm-6 col-md-6 col-lg-6 tenantmargin" style="visibility:hidden;">
+                          <input  type="text" id="tenantaddr"   name="tenantaddr" class="  tenantform" required/>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                     <ul class="tenantform">
+                       <li><a href="" ng-click="addTenant(Tenant)" id="TenantAdd">save</a></li>
+                          <li><a ng-href="#/tenant">cancel</a></li>
+                          <!--   <li><a href="">close</a></li> -->
+                     </ul>
+                   </div>
+                 </form>
+</div>
+</div>
+<div class="tenanttable col-sm-12 col-md-12 col-lg-12">
+  <div class="row addtenanttableholder" ng-show="TenantAdd" {{tenantcheckbox1}}>
+  <div class="tenanttableheader blackbackground col-sm-12 col-md-12 col-lg-12">
+      <div class="tenanttableh1 visibility-hidden">55</div>
+        <div class="tenanttableh2 visibility-hidden">1</div>
+    <div class="tenanttableh3">Meter name</div>
+    <div class="tenanttableh4">meter ID</div>
+    <div class="tenanttableh5">billing from date</div>
+    <div class="tenanttableh6">billing to date</div>
+  </div>
+  <div class="addtablecontent col-sm-12 col-md-12 col-lg-12 overflow">
+       <!-- put for loop here -->
+          <div class="tenanttabledata  col-sm-12 col-md-12 col-lg-12" ng-init="mdata=meterData">
+          <div class="tenanttableh1 ">
+          <input class="tenantcheckbox" type="checkbox" name="name" id="tenantcheckbox1"  ng-model="tenantcheckbox1.value1"></div>
+          <div class="tenanttableh2 ">1</div>
+          <div class="tenanttableh3">{{meter.metername}}</div>
+          <div class="tenanttableh4">{{meter.meterid}}</div>
+          <div class="tenanttableh5">{{meter.startdate}}</div>
+          <div class="tenanttableh6">{{meter.endtdate}}</div>
+          </div>
+
+      <p class="metermessage animated bounceIn">No meters are available to assign.Meter is already assigned to a tenant.</p>
+           <!-- put for loop here -->
+  </div>
+  <div class="addtenantfooter col-lg-12 col-sm-12 col-md-12">
+    <a href="" class="assign" ng-click="assignMeter(mdata)" id="assign">Assign</a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$('#tenantdatestart').datepicker({
+
+minDate: new Date() ,
+autoclose : true,
+format : "mm/dd/yyyy",
+
+});
+
+$('#tenantdateend').datepicker({
+
+minDate: new Date() ,
+autoclose : true,
+format : "mm/dd/yyyy"
+});
+
+$(document).ready(function(){
+    $("#billInterval").change(function(){
+      var dateInt = $(this).val();
+
+      var a = parseInt(dateInt);
+
+      var d = $('#tenantdatestart').datepicker('getDate');
+        d.setDate(d.getDate() + a);
+
+        $("#tenantlbd").datepicker("setDate", d);
+});
+});
+
+</script>

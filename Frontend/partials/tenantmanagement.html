@@ -1,0 +1,74 @@
+<div header></div>
+<div sidenav></div>
+<div class="container-fluid dashboardContainer">
+<div class="container-fluid dashboardContentHolder ">
+ <div class="tenant">
+  <div class="addTenant">
+    <a ng-href="#/addTenant" class="addTenantButton">Add Tenant</a>
+  </div>
+<div class="container-fluid no-padding" style="margin-left:-45px;">
+	 <table id="" class="table table-hover datatable no-padding" cellspacing="0" width="100%" >
+        <thead>
+            <tr>
+              <th style="width:45px !important;">Sr.</th>
+              <th>Name</th>
+              <th>Display Name</th>
+              <th style="width:45px !important;">ID</th>
+              <th>Account No</th>
+              <th>Address</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+
+              <th style="width:90px !important">Action</th>
+            </tr>
+        </thead>
+		<tbody>
+
+      <tr  ng-repeat="data in tenantList" id="tenant{{data.tennantid}}">
+                  <td style="width:45px !important;" onclick="window.location.href= '#/tenantdetail' ">{{$index+1}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.tennantname}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.displayname}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'" style="width:45px !important;">{{data.tennantid}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.accountno}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.address}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.startdate}}</td>
+                  <td onclick="window.location.href= '#/tenantdetail'">{{data.enddate}}</td>
+  		<td>
+          <a ng-click="editTenant(data)" class="edit_icon"> <img ng-src="{{base}}images/dashboard/edit1.png" height="25px"/></a>
+          <a ng-click="deleteTenant(data)"><img ng-src="{{base}}images/dashboard/delete-icon.png" class="delete_icon" height="27px"/></a>
+       </td>
+              </tr>
+
+
+
+
+		</tbody>
+
+	  </table>
+	 </div>
+
+ </div>
+ <div class="deletePopupContainer">
+   <div class="deleteContent">
+     <p class="deleteText">Are you sure you want to delete this tenant ?</p>
+    <p class="deleteDesc">All the information related to this tenant will be deleted.</p>
+    <ul class="deleteControls">
+      <li><a href="" ng-click="customeDemo('true')">Delete</a></li>
+      <li><a href="" ng-click="customeDemo('false')">Cancel</a></li>
+    </ul>
+   </div>
+ </div>
+</div>
+
+
+	<style>
+		div.dataTables_filter{
+
+			margin-top: -45px !important
+		}
+    div.dataTables_paginate paging_simple_numbers{
+
+      display: none !important;
+    }
+
+	</style>

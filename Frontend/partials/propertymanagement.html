@@ -1,0 +1,74 @@
+<div header></div>
+<div sidenav></div>
+<div class="container-fluid dashboardContainer" style="overflow:hidden">
+<div class="container-fluid dashboardContentHolder ">
+ <div class="tenant">
+  <div class="addTenant">
+    <a ng-href="#/addProperty" class="addTenantButton">Add Property</a>
+  </div>
+  <div class="tenantTable col-sm-12 col-md-12 col-lg-12">
+  <!--creating own table default table doesnt work properly as per the design-->
+	  <div class="container-fluid no-padding">
+	<table id="" class="table table-hover datatable no-padding" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Property Name</th>
+                <th>Property Address</th>
+                <th>No of Tenants</th>
+                <th>Age</th>
+                <th>No of Unpaid Invoices</th>
+                <th>No of Paid Invoices</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+		<tbody>
+		<tr>
+                <td>Pennsylvania 127</td>
+                <td>490 E South Orlando, FL</td>
+                <td>5</td>
+                <td>61</td>
+                <td>2</td>
+                <td>3</td>
+			<td><a ng-href="#/editProperty" class="edit_icon"> <img ng-src="{{base}}images/dashboard/edit1.png" height="25px"/></a><a ng-href="#"><img ng-src="{{base}}images/dashboard/delete-icon.png" height="27px"/></a> </td>
+            </tr>
+
+		<tr>
+                <td> Extension Naples</td>
+                <td>4800 Ct Orlando, FL</td>
+                <td>3</td>
+                <td>45</td>
+                <td>1</td>
+                <td>2</td>
+			<td><a ng-href="#/editProperty" class="edit_icon"> <img ng-src="{{base}}images/dashboard/edit1.png" height="25px"/></a><a ng-href="#"><img ng-src="{{base}}images/dashboard/delete-icon.png" height="27px"/></a> </td>
+            </tr>
+            <tr>
+                        <td> CDMX. 03810 </td>
+                        <td>PO Box 2769 Orlando FL</td>
+                        <td>6</td>
+                        <td>39</td>
+                        <td>4</td>
+                        <td>2</td>
+              <td><a ng-href="#/editProperty" class="edit_icon"> <img ng-src="{{base}}images/dashboard/edit1.png" height="25px"/></a><a ng-href="#"><img ng-src="{{base}}images/dashboard/delete-icon.png" height="27px"/></a> </td>
+                    </tr>
+
+
+
+
+		</tbody>
+
+	  </table>
+
+	  </div>
+
+
+  </div>
+ </div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+
+  /*  $('.datatable').DataTable({ "bPaginate": false}); */
+});
+
+</script>

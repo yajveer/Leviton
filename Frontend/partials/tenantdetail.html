@@ -1,0 +1,249 @@
+<div header></div>
+<div sidenav></div>
+<div class="container-fluid dashboardContainer">
+<div class="container-fluid dashboardContentHolder">
+<div class="row tenantgridcontainer">
+  <div class="col-md-12 col-lg-12 col-sm-12 tenantgridrow1">
+<div class="col-sm-6 col-md-6 col-lg-6 tenantgrid1">
+  <div class="col-lg-12 col-md-12 col-sm-12 grid1content">
+    <div class="tenantgridheader col-lg-12 col-md-12 col-sm-12">
+         <div class="pull-left">Current Details of the tenant</div>
+         <img class="pull-right" ng-src="{{base}}images/dashboard/edit1.png" alt="" height="21px">
+    </div>
+    <div class="tenantgriddata row">
+ <table class="table table-hover">
+   <thead>
+     <tr>
+       <th></th>
+       <th>Name</th>
+       <th>ID</th>
+       <th>Account no.</th>
+       <th>Meter no.</th>
+       <th>Status</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+  <td><img class="text text-right" ng-src="{{base}}images/dashboard/green-dot.png" height="10px"/></td>
+  <td>Leviton Meter</td>
+  <td>112</td>
+  <td>525252525</td>
+  <td>1</td>
+  <td>Active</td>
+     </tr>
+   </tbody>
+ </table>
+    </div>
+    <div class="tenantgridfooter col-lg-12 col-md-12 col-sm-12">
+         <div class="pull-left"><span class="bold">Contact email: </span>test@gmail.com</div>
+         <div class="pull-right"><span class="bold">Phone no: </span>01 (55) 5448-7810</div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6 tenantgrid2">
+  <div class="col-lg-12 col-md-12 col-sm-12 grid2content">
+    <div class="tenantgridheader col-lg-12 col-md-12 col-sm-12">
+         <div class="pull-left">Current Details of the tenant</div>
+         <ul class="tenatList">
+           <li>
+             <span class="tenantlistholder">
+               <a href="" class=" paidToggle top-left-radius" id="paid">Paid</a>
+               <a href="" class=" paidToggle top-right-radius" id="unpaid">Unpaid</a>
+             </span>
+           </li>
+
+         </ul>
+    </div>
+    <div class="tenantpaidholder row">
+      <!-- put for loop here-->
+    <div class="col-sm-12 col-md-12 col-lg-12 bottom">
+      <div class="col-sm-1 col-md-1 col-lg-1"><input class="tenantcheckbox" type="checkbox" name="name" value=""></div>
+      <div class="col-sm-1 col-md-1 col-lg-1 "><img ng-src="{{base}}images/dashboard/red-dot.png" height="12px" alt=""></div>
+        <div class="col-sm-8 col-md-8 col-lg-8 tenanttextholder">
+              <span class="textnormal tenanttextmargin">Bill payemnt created for the month of <span class="red">05/03/2016</span></span>
+        </div>
+          <div class="col-sm-1 col-md-1 col-lg-1 "><span class="textnormal">view</span></div>
+          <div class="col-sm-1 col-md-1 col-lg-1 "><img ng-src="{{base}}images/dashboard/delete-icon.png" height="24px" /></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 bottom">
+      <div class="col-sm-1 col-md-1 col-lg-1"><input class="tenantcheckbox" type="checkbox" name="name" value=""></div>
+      <div class="col-sm-1 col-md-1 col-lg-1 "><img ng-src="{{base}}images/dashboard/gray-dot.png" height="12px" alt=""></div>
+        <div class="col-sm-8 col-md-8 col-lg-8 tenanttextholder">
+              <span class="textnormal tenanttextmargin">Bill payemnt created for the month of <span class="red">05/03/2016</span></span>
+        </div>
+          <div class="col-sm-1 col-md-1 col-lg-1 "><span class="textnormal">view</span></div>
+          <div class="col-sm-1 col-md-1 col-lg-1 "><img ng-src="{{base}}images/dashboard/delete-icon.png" height="24px" /></div>
+    </div>
+      <!-- put for loop here-->
+    </div>
+    <div class="tenantgrid2footer col-lg-12 col-md-12 col-sm-12">
+      <a href="" class="updatetenant bold">update</a>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-12 col-lg-12 col-sm-12 tenantgridrow2">
+    <div class="col-sm-6 col-md-6 col-lg-6 tenantgrid3">
+      <div class="col-lg-12 col-md-12 col-sm-12 grid3content">
+        <div class="tenantcommonheader col-lg-12 col-md-12 col-sm-12">
+          <span class="bold pull-left">Unbilled usage of energy</span>
+          <ul class="tenatList">
+            <li>
+              <span class="tenantlistholder">
+                <a href="" class=" paidToggle top-left-radius" id="daily">Daily</a>
+                <a href="" class=" paidToggle top-right-radius" id="monthly">Monthly</a>
+              </span>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 gridmaincontent">
+  <div class="chart1" id="addTenant"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 tenantgrid4">
+      <div class="col-lg-12 col-md-12 col-sm-12 grid4content">
+        <div class="tenantcommonheader col-lg-12 col-md-12 col-sm-12">
+          <span class="bold pull-left">meter reading of the tenant</span>
+          <ul class="tenatList">
+            <li>
+              <span class="tenantlistholder">
+                <a href="" class=" paidToggle top-left-radius" id="">from</a>
+                <a href="" class=" paidToggle top-right-radius" id="">18/04/2016</a>
+              </span>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 gridmaincontent">
+         <div class="row">
+           <div class="col-sm-6 col-md-6 col-lg-6 leftmeterreading">
+                 <div class="row">
+                   <div class="col-sm-12 col-md-12 col-lg-12">
+                     <span class="metertextcontainer1"><span class="meternormaltext">energy consumption</span>
+                     <span class="meterboldtext">{{total}} KwH</span>
+                   </div>
+                   <div class="col-sm-12 col-md-12 col-lg-12">
+                     <!-- need to write javascript to change the percent reference w3schools -->
+                  <div class="progress col-sm-12 col-md-12 col-lg-12" id="progress">
+                    <div class="bar col-sm-12 col-md-12 col-lg-12" id="bar"></div>
+                    <label class="percenttext " id="barpercenttext">40%</label>
+                  </div>
+                  <!-- need to write javascript to change the percent reference w3schools -->
+                  <div class="day col-sm-12 col-md-12 col-lg-12">yesterday</div>
+                   </div>
+                   <div class="col-sm-12 col-md-12 col-lg-12 generatebill">
+                     <a  class="generate" href="">generate bill</a>
+                   </div>
+                 </div>
+           </div>
+           <div class="col-sm-6 col-md-6 col-lg-6 rightmeterreading">
+             <div class="gauge" id="gauge">
+
+             </div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-12 col-sm-12 tenantgridrow3">
+    <div class="col-sm-5 col-md-5 col-lg-5 tenantgrid5">
+      <div class="col-lg-12 col-md-12 col-sm-12 grid5content">
+        <div class="tenantcommonheader text-center bold col-lg-12 col-md-12 col-sm-12">
+          cost analysis of the tenant
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 gridmaincontent">
+           <div class="chart1" id="areaChart1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 tenantgrid6">
+      <div class="col-lg-12 col-md-12 col-sm-12 grid6content">
+        <div class="tenantcommonheader text-center  bold col-lg-12 col-md-12 col-sm-12">
+          energy enalysis of the tenant
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 gridmaincontent">
+ <div class="chart1" id="areaChart2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3 tenantgrid7">
+      <div class="col-lg-12 col-md-12 col-sm-12 grid7content">
+        <div class="tenantcommonheader blackbackground text-center bold col-lg-12 col-md-12 col-sm-12">
+        invoice summary
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12  gridmaincontent">
+          <div class="row invoiceinnerheader">
+            <div class="col-sm-2 col-md-2 col-lg-2 text-left bold">date</div>
+            <div class="col-sm-5 col-md-5 col-lg-4 text-right bold">invoice no.</div>
+            <div class="col-sm-1 col-md-1 col-lg-2 visibility-hidden">view</div>
+            <div class="col-sm-3 col-md-3 col-lg-2 bold text-right">status</div>
+          </div>
+          <div class="invoceinnercontainer overflow col-sm-12 col-md-12 col-lg-12">
+            <!-- put for loop here -->
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left  red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right green">Recieved</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right green">Recieved</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right red">pending</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right green">Recieved</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right red">pending</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right green">Recieved</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right red">pending</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right green">Recieved</div>
+            </div>
+            <div class="invoceinnercontent row ">
+              <div class="col-sm-2 col-md-2 col-lg-2 text-left red">15/04/2016</div>
+              <div class="col-sm-5 col-md-5 col-lg-4 text-right">45ASED85</div>
+              <div class="col-sm-1 col-md-1 col-lg-2 text-left">view</div>
+              <div class="col-sm-3 col-md-3 col-lg-2 text-right red">pending</div>
+            </div>
+              <!-- put for loop here -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

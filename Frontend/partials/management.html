@@ -1,0 +1,62 @@
+<div class="container-fluid managementcontentholder">
+<div class="header">
+<ul class="management_navigation_holder">
+  <li class='nav_item'><button type="button" class="navbtn1" name="button">English</button></li>
+  <li class='nav_item'><button type="button" class="navbtn" name="button" ng-click="logout()">Log out</button></li>
+</ul>
+</div>
+<div class="container-fluid managementcontent">
+  <div class="container-fluid customcontainer">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 managementlogo">
+          <img src="{{base}}images/login-logo.png" alt="" height="60px">
+    </div>
+
+    <div class="col-md-12 col-lg-12 managementDesc">
+<div class="lspan"></div>
+<h3>Advanced online tenant management</h3>
+<div class="rspan"></div>
+    </div>
+
+
+       <div class="container">
+         <div class="col-md-3 col-lg-3 data-grid">
+            <img ng-src="{{base}}/images/cost-analysis.png" alt="" class="mgntimg"><br>
+          <a class="managementButton" type="button" name="button">Cost Analysis</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/energy-analysis.png" alt="" class="mgntimg"><br>
+          <a class="managementButton" type="button" name="button">Energy Analysis</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/reports.png" alt="" class="mgntimg"><br>
+        <a class="managementButton" type="button" name="button">Reports</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/dashboard.png" alt="" class="mgntimg"><br>
+          <a ng-href="#/dashboard" class="managementButton btn btn-link" type="button" name="button">Dashboard</a>
+         </div>
+       </div>
+       <div class="container">
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/alarms.png" alt="" class="mgntimg"><br>
+           <a class="managementButton" type="button" name="button">Alarms</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/tenant-bill.png" alt="" class="mgntimg"><br>
+          <a ng-href="#/tenantBill" class="managementButton" type="button" name="button">Tenant Bill</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/tenant-mgnt.png" alt="" class="mgntimg"><br>
+        <a ng-href="#/tenant" class="managementButton" type="button" name="button">Tenant Mgnt</a>
+         </div>
+         <div class="col-md-3 col-lg-3 data-grid">
+           <img ng-src="{{base}}/images/metre-reading.png" alt="" class="mgntimg"><br>
+          <a class="managementButton" type="button" name="button">Meter Reading</a>
+         </div>
+       </div>
+
+  </div>
+  </div>
+</div>
+</div>

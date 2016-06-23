@@ -1,0 +1,75 @@
+
+<div class="container-fluid bgimgholder" onload="javascript:customeLoginCtrl();">
+  <div class=" no-margin row">
+    <div class="col-md-12 col-lg-12 maincontainer">
+      <div class="col-md-6 col-lg-6 leftcontent">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 ">
+            <img class='logoimg' ng-src="{{base}}images/login-logo.png" height="80px"/>
+          </div>
+            <div class="col-md-12 col-lg-12">
+              <h2>Energy monitoring and</h2>
+            </div>
+              <div class="col-md-12 col-lg-12">
+                <h2>Tenant billing solution</h2>
+              </div>
+                <div class="col-md-12 col-lg-12">
+                  <h4>Advanced online tenant management</h4>
+                </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6  rightcontent">
+        <div class="row">
+          <form class="" name="loginform">
+           <div class="col-sm-12 col-md-12 col-lg-12 ">
+              <label class="labels" for="username" id="usernameLabel">Username</label>
+             <div class="input-group">
+     <span class="input-group-addon" id="basic-addon1">
+         <img ng-src="{{base}}images/username-icon.png" alt="" height="20px" width="20px">
+     </span>
+
+     <input type="text"  class="form-control username" id="username" ng-model="User.username" aria-describedby="basic-addon1" required>
+   </div>
+          </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <label class="labels" for="password" id="passwordLabel">Password</label>
+              <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+ <img ng-src="{{base}}images/password-icon.png" alt="" height="20px" width="16px">
+    </span>
+
+    <input type="password"  class="form-control password" id="password" ng-model="User.password" aria-describedby="basic-addon1" required>
+           </div>
+            </div>
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label class="labels logas" id="#log_as"for="">Login as</label>
+                <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+       <img ng-src="{{base}}images/login-as-icon.png" alt="" height="16px" width="15px">
+    </span>
+      <select data-placeholder="Login as"   class="form-control loginas" ng-model="User.type"  id="managerType" required>
+        <option >Project Manager</option>
+        <option>admin</option>
+      </select>
+  </div>
+              </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                <button type="submit" class="btn btn-block loginbtn" ng-disabled="loginform.$touched || loginform.$invalid && loginform.$dirty" ng-click="login(User)" id="login">LOGIN</button>
+                </div>
+                  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<script type="text/javascript">
+    $('.loginas').select2();
+$().ready(function(){
+//alert();
+  $(".selection").click(function(){$(".logas").hide();})
+
+
+})
+</script>
